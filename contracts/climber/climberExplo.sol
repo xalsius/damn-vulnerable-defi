@@ -72,7 +72,7 @@ contract ClimberHack1 {
         (bool succ, ) = _vault.call(
             abi.encodeWithSignature("upgradeTo(address)", cv2)
         );
-        require(succ, "upgrade fucking failed");
+        require(succ, "upgrade failed");
     }
 
     function scheduleZero() public {
