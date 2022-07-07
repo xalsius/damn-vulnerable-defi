@@ -51,9 +51,11 @@ describe('[Challenge] Climber', function () {
         await this.token.transfer(this.vault.address, VAULT_TOKEN_BALANCE);
     });
 
-    it('Exploit', async function () {        
+    it('Exploit', async function () {
         /** CODE YOUR EXPLOIT HERE */
+       let climberhack =  await (await ethers.getContractFactory('ClimberHack', attacker)).deploy(this.vault.address, attacker.address, this.token.address);
     });
+
 
     after(async function () {
         /** SUCCESS CONDITIONS */
